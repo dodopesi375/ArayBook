@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Digital — Produk Digital Siap Pakai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FAFAFA] text-zinc-900 antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-30 bg-[#FAFAFA]/85 backdrop-blur border-b border-zinc-200/80">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg tracking-tight">Studio Digital</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-zinc-600">
+        <a href="#katalog" class="hover:text-zinc-900 transition">Katalog</a>
+        <a href="#tentang" class="hover:text-zinc-900 transition">Tentang</a>
+        <a href="#faq" class="hover:text-zinc-900 transition">FAQ</a>
+        <a href="#kontak" class="hover:text-zinc-900 transition">Kontak</a>
+      </nav>
+      <span class="text-xs font-medium px-3 py-1.5 rounded-full bg-zinc-200/70 text-zinc-800">
+        Produk Digital
+      </span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-5 pt-16 pb-14">
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3">Akses File via Google Drive</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.15] text-zinc-900">
+        Aset &amp; Produk Digital Siap Pakai untuk Kerja Lebih Cepat
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-zinc-600 leading-relaxed">
+        Pilih produk digital yang Anda butuhkan, bayar lewat QRIS atau Transfer/Tunai, lalu kirim konfirmasi beserta email Google Anda untuk menerima akses file.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#katalog" class="px-6 py-3 rounded-xl bg-[#111827] text-white text-sm font-medium hover:bg-zinc-800 shadow-sm transition">
+          Lihat Katalog
+        </a>
+        <a href="#tentang" class="px-6 py-3 rounded-xl bg-white text-zinc-800 border border-zinc-200 text-sm font-medium hover:bg-zinc-50 transition">
+          Tentang Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Katalog -->
+  <section id="katalog" class="max-w-6xl mx-auto px-5 py-12">
+    <div class="mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Katalog Produk</h2>
+      <p class="text-sm text-zinc-600 mt-1">Klik "Beli Sekarang" untuk membuka rincian pembayaran QRIS atau Transfer/Tunai.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Produk 1 -->
+      <article class="bg-white rounded-2xl border border-zinc-200/90 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="aspect-video bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-600 flex items-center justify-center text-white/90">
+            <i data-lucide="layout-template" class="w-10 h-10"></i>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-700">Template</span>
+            <h3 class="text-lg font-bold mt-3">Paket Template Konten &amp; Presentasi</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-zinc-600">
+              <li>• Siap diedit &amp; dipakai berulang</li>
+              <li>• Tata letak rapi dan modern</li>
+              <li>• Akses folder Google Drive</li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-zinc-100">
+          <div>
+            <span class="text-xs text-zinc-500 block">Harga</span>
+            <strong class="text-lg font-bold">Rp49.000</strong>
+          </div>
+          <button onclick="openCheckout('Paket Template Konten & Presentasi', 'Rp49.000')" class="px-4 py-2.5 rounded-xl bg-[#111827] text-white text-sm font-medium hover:bg-zinc-800 transition cursor-pointer">
+            Beli Sekarang
+          </button>
+        </div>
+      </article>
+
+      <!-- Produk 2 -->
+      <article class="bg-white rounded-2xl border border-zinc-200/90 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="aspect-video bg-gradient-to-br from-slate-800 via-slate-700 to-zinc-500 flex items-center justify-center text-white/90">
+            <i data-lucide="book-open" class="w-10 h-10"></i>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-700">E-Book &amp; Panduan</span>
+            <h3 class="text-lg font-bold mt-3">Panduan Praktis Produktivitas Digital</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-zinc-600">
+              <li>• Disusun ringkas &amp; mudah dipraktikkan</li>
+              <li>• Cocok untuk pemula hingga menengah</li>
+              <li>• Termasuk daftar periksa kerja</li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-zinc-100">
+          <div>
+            <span class="text-xs text-zinc-500 block">Harga</span>
+            <strong class="text-lg font-bold">Rp59.000</strong>
+          </div>
+          <button onclick="openCheckout('Panduan Praktis Produktivitas Digital', 'Rp59.000')" class="px-4 py-2.5 rounded-xl bg-[#111827] text-white text-sm font-medium hover:bg-zinc-800 transition cursor-pointer">
+            Beli Sekarang
+          </button>
+        </div>
+      </article>
+
+      <!-- Produk 3 -->
+      <article class="bg-white rounded-2xl border border-zinc-200/90 overflow-hidden flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="aspect-video bg-gradient-to-br from-neutral-900 via-stone-700 to-zinc-500 flex items-center justify-center text-white/90">
+            <i data-lucide="folder-kanban" class="w-10 h-10"></i>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-700">Sistem Kerja</span>
+            <h3 class="text-lg font-bold mt-3">Kit Manajemen Proyek &amp; Keuangan</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-zinc-600">
+              <li>• Struktur rapi untuk memantau progres</li>
+              <li>• Hemat waktu penyiapan dari nol</li>
+              <li>• Dikirim ke email Google pembeli</li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-zinc-100">
+          <div>
+            <span class="text-xs text-zinc-500 block">Harga</span>
+            <strong class="text-lg font-bold">Rp75.000</strong>
+          </div>
+          <button onclick="openCheckout('Kit Manajemen Proyek & Keuangan', 'Rp75.000')" class="px-4 py-2.5 rounded-xl bg-[#111827] text-white text-sm font-medium hover:bg-zinc-800 transition cursor-pointer">
+            Beli Sekarang
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="max-w-6xl mx-auto px-5 py-12">
+    <div class="bg-white rounded-2xl border border-zinc-200/90 p-7 sm:p-10">
+      <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500">Tentang</span>
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mt-2">Dibuat untuk Membantu Eksekusi Lebih Cepat</h2>
+      <p class="mt-4 text-zinc-600 leading-relaxed max-w-3xl">
+        Studio Digital menyediakan berbagai produk digital seperti template, panduan, dan sistem kerja siap pakai. Setiap pembelian diverifikasi dan diberikan akses filenya melalui Google Drive menggunakan alamat email Google yang Anda cantumkan saat konfirmasi pembayaran.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-5 py-12">
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-6">Pertanyaan Umum (FAQ)</h2>
+    <div class="space-y-3">
+      <details class="bg-white rounded-2xl border border-zinc-200/90 p-5 group">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Bagaimana cara mendapatkan produk setelah membayar?
+          <span class="text-zinc-400 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+          Setelah melakukan pembayaran lewat QRIS atau Transfer/Tunai, klik tombol Konfirmasi Pembayaran via WhatsApp dengan mengisi email Google Anda. Setelah pembayaran dicek, akses file/folder Google Drive akan diberikan ke email tersebut.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-2xl border border-zinc-200/90 p-5 group">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Metode pembayaran apa saja yang tersedia?
+          <span class="text-zinc-400 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+          Anda dapat membayar menggunakan QRIS maupun Transfer Bank / konfirmasi setoran tunai sesuai informasi yang tampil pada pop-up pembelian.
+        </p>
+      </details>
+
+      <details class="bg-white rounded-2xl border border-zinc-200/90 p-5 group">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Berapa lama proses verifikasi dan pengiriman akses?
+          <span class="text-zinc-400 group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600 leading-relaxed">
+          Konfirmasi dan pengiriman akses Google Drive dilakukan maksimal 1×24 jam setelah bukti pembayaran diterima.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="max-w-6xl mx-auto px-5 py-12">
+    <div class="bg-white rounded-2xl border border-zinc-200/90 p-7 sm:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-zinc-500">Kontak</span>
+        <h2 class="text-2xl font-bold tracking-tight mt-1">Butuh Bantuan atau Konfirmasi?</h2>
+        <p class="text-sm text-zinc-600 mt-2">WhatsApp: <strong>0812-3456-7890</strong> • Email: <strong>halo@studiodigital.example</strong></p>
+        <p class="text-xs text-zinc-500 mt-1">Layanan setiap hari • Estimasi konfirmasi maksimal 1×24 jam</p>
+      </div>
+      <a href="https://wa.me/6281234567890?text=Halo%20Studio%20Digital%2C%20saya%20ingin%20bertanya%20seputar%20produk%20digital." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition">
+        Chat WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-200/80 mt-10">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+      <p>© 2026 Studio Digital. Akses produk digital diberikan setelah pembayaran terverifikasi.</p>
+      <div class="flex gap-5">
+        <a href="#katalog" class="hover:text-zinc-800">Katalog</a>
+        <a href="#tentang" class="hover:text-zinc-800">Tentang</a>
+        <a href="#faq" class="hover:text-zinc-800">FAQ</a>
+        <a href="#kontak" class="hover:text-zinc-800">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Pembayaran -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl relative max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between border-b border-zinc-100 pb-4">
+        <div>
+          <span class="text-xs text-zinc-500">Ringkasan Pesanan</span>
+          <h3 id="modalProductName" class="text-lg font-bold text-zinc-900 mt-0.5">-</h3>
+          <p id="modalProductPrice" class="text-sm font-semibold text-zinc-700 mt-0.5">-</p>
+        </div>
+        <button onclick="closeCheckout()" class="text-zinc-400 hover:text-zinc-700 text-xl leading-none px-2 cursor-pointer">&times;</button>
+      </div>
+
+      <!-- Tab Metode Pembayaran -->
+      <div class="grid grid-cols-2 gap-2 bg-zinc-100 p-1 rounded-xl mt-4 text-sm font-medium">
+        <button id="tabQris" onclick="switchTab('qris')" class="py-2 rounded-lg bg-white text-zinc-900 shadow-sm transition cursor-pointer">
+          QRIS
+        </button>
+        <button id="tabTransfer" onclick="switchTab('transfer')" class="py-2 rounded-lg text-zinc-600 hover:text-zinc-900 transition cursor-pointer">
+          Transfer / Tunai
+        </button>
+      </div>
+
+      <!-- Konten Tab QRIS -->
+      <div id="panelQris" class="mt-4 text-center">
+        <img src="qris.jpg" alt="Kode QRIS Pembayaran" class="w-52 h-52 object-contain mx-auto rounded-xl border border-zinc-200 p-2 bg-white" />
+        <a href="qris.jpg" download="qris.jpg" class="inline-block mt-3 text-xs font-medium text-zinc-700 underline hover:text-zinc-900">
+          Unduh / Simpan Gambar QRIS
+        </a>
+      </div>
+
+      <!-- Konten Tab Transfer / Tunai -->
+      <div id="panelTransfer" class="mt-4 hidden space-y-3">
+        <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 text-sm">
+          <p class="text-xs text-zinc-500">Transfer Bank / Konfirmasi Tunai</p>
+          <p class="font-semibold text-zinc-900 mt-1">BCA — 1234567890</p>
+          <p class="text-zinc-600 text-xs mt-0.5">a.n. Admin Toko (atau konfirmasi setoran tunai via WA)</p>
+          <button type="button" onclick="copyRekening()" id="copyBtn" class="mt-3 px-3 py-1.5 rounded-lg bg-zinc-900 text-white text-xs font-medium hover:bg-zinc-800 transition cursor-pointer">
+            Salin Rekening
+          </button>
+        </div>
+      </div>
+
+      <!-- Form Email & WA -->
+      <form id="waForm" class="mt-5 space-y-3">
+        <div>
+          <label for="buyerEmail" class="block text-xs font-semibold text-zinc-700 mb-1">
+            Email Google Pembeli (untuk akses Google Drive)
+          </label>
+          <input id="buyerEmail" type="email" required placeholder="nama@gmail.com" class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-300 text-sm focus:outline-none focus:border-zinc-900" />
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition cursor-pointer">
+          Konfirmasi Pembayaran via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    let selectedProduct = '';
+    let selectedPrice = '';
+    let selectedMethod = 'QRIS';
+
+    const modal = document.getElementById('checkoutModal');
+    const panelQris = document.getElementById('panelQris');
+    const panelTransfer = document.getElementById('panelTransfer');
+    const tabQris = document.getElementById('tabQris');
+    const tabTransfer = document.getElementById('tabTransfer');
+
+    function openCheckout(product, price) {
+      selectedProduct = product;
+      selectedPrice = price;
+      document.getElementById('modalProductName').textContent = product;
+      document.getElementById('modalProductPrice').textContent = price;
+      switchTab('qris');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCheckout() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function switchTab(method) {
+      if (method === 'qris') {
+        selectedMethod = 'QRIS';
+        panelQris.classList.remove('hidden');
+        panelTransfer.classList.add('hidden');
+        tabQris.className = 'py-2 rounded-lg bg-white text-zinc-900 shadow-sm transition cursor-pointer';
+        tabTransfer.className = 'py-2 rounded-lg text-zinc-600 hover:text-zinc-900 transition cursor-pointer';
+      } else {
+        selectedMethod = 'Transfer / Tunai';
+        panelTransfer.classList.remove('hidden');
+        panelQris.classList.add('hidden');
+        tabTransfer.className = 'py-2 rounded-lg bg-white text-zinc-900 shadow-sm transition cursor-pointer';
+        tabQris.className = 'py-2 rounded-lg text-zinc-600 hover:text-zinc-900 transition cursor-pointer';
+      }
+    }
+
+    function copyRekening() {
+      navigator.clipboard?.writeText('1234567890');
+      const btn = document.getElementById('copyBtn');
+      const oldText = btn.textContent;
+      btn.textContent = 'Tersalin!';
+      setTimeout(() => { btn.textContent = oldText; }, 1800);
+    }
+
+    document.getElementById('waForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('buyerEmail').value.trim();
+      const msg =
+        `Halo Studio Digital, saya ingin konfirmasi pembayaran:%0A` +
+        `- Produk: ${encodeURIComponent(selectedProduct)}%0A` +
+        `- Harga: ${encodeURIComponent(selectedPrice)}%0A` +
+        `- Metode Bayar: ${encodeURIComponent(selectedMethod)}%0A` +
+        `- Email Google (GDrive): ${encodeURIComponent(email)}`;
+      window.open(`https://wa.me/6281234567890?text=${msg}`, '_blank', 'noopener,noreferrer');
+    });
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeCheckout();
+    });
+  </script>
+</body>
+</html>
